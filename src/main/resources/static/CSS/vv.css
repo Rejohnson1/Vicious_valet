@@ -1,0 +1,52 @@
+@charset "ISO-8859-1";
+
+
+body {
+    font-size: 20px;
+    font-family: helvetica;
+    background-color: black;
+    color: white;
+	background-image: url("/images/713330_1.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+	float: center;	
+}
+
+
+label {
+	float: left;
+}
+
+
+p {
+	color: red;
+	font-size: 20px;
+}
+
+button {
+	font-size: 20px;
+    font-family: verdana;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+}
+
+button: hover {
+	color: darkred;	
+}
+
+
+table {
+border-color: white;
+border-style: solid;
+border-width: 3px;
+border-collapse: collapse;
+width: 50%;
+text-align: center;	
+ }
+ 
+thead {
+ text-decoration: underline;
+ }
+ 
+ 

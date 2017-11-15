@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF8">
+<title>Vicious Valet</title>
+        <link rel="stylesheet" 
+        href="/CSS/vv.css">             
+</head>
+<body>
+
+	<form action="/" method="post">
+		<div>
+			<label> License Plate <input type="text" name="license">
+			</label>
+		</div>
+		<div>
+			<label> License State <input type="text" name="state">
+			</label>
+		</div>
+		<div>
+			<label> Color <input type="text" name="color">
+			</label>
+		</div>
+		<div>
+			<label> Make <input type="text" name="make">
+			</label>
+		</div>
+		<div>
+			<label> Model <input type="text" name="model">
+			</label>
+		</div>
+		<button>Add a new car</button>
+	</form>
+
+	<p>The lot is full: {{lot.isLotFull}}</p>
+	<p>The number of cars in the lot: {{ lot.carList.size }}</p>
+
+	<table>
+		<thead>
+			<tr>
+				<th>License</th>
+				<th>State</th>
+				<th>Make</th>
+				<th>Model</th>
+				<th>Color</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#lot.carList}}
+			<tr>
+				<td>{{ license }}</td>
+				<td>{{ state }}</td>
+				<td>{{ make }}</td>
+				<td>{{ model }}</td>
+				<td>{{ color }}</td>
+				<td>
+					<form method="post" action="/remove">
+				        <input type = hidden name="carIndex" value="{{ -index }}">
+						<button>Remove from lot</button>
+					</form>
+				</td>
+			</tr>
+			{{/lot.carList}}
+		</tbody>
+	</table>
+</body>
+</html>
